@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Startup Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="welcome">Welcome, <span id="userName"></span>!</div>
+      <div class="datetime" id="datetime"></div>
+    </div>
+    <div class="content">
+      <div class="buttons left-buttons">
+        <input type="file" id="backgroundSelector" onchange="setBackgroundImage(event)">
+        <button onclick="setName()">Set Name</button>
+        <select id="textColorSelector" onchange="setTextColor()">
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="yellow">Yellow</option>
+          <option value="white">White</option>
+        </select>
+      </div>
+      <div class="links">
+        <div class="link-row">
+          <a href="https://www.satchelone.com/todos/upcoming"><img src="https://th.bing.com/th/id/OIP.7cUzxcWOxpuXEcuil_drtgAAAA?rs=1&pid=ImgDetMain" alt="Satchel One"></a>
+          <a href="https://mail.google.com/mail/u/0/#inbox"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1280px-Gmail_icon_%282020%29.svg.png" alt="Gmail"></a>
+          <a href="https://classroom.google.com/h"><img src="https://cdn.iconscout.com/icon/free/png-256/google-classroom-2-569465.png" alt="Google Classroom"></a>
+        </div>
+        <div class="link-row">
+          <a href="https://drive.google.com/drive/u/0/home?lfhs=2"><img src="https://th.bing.com/th/id/R.fb4b7a2221d4a2f36f9994e6c71a467f?rik=FPkWO8lBO0ygnA&pid=ImgRaw&r=0" alt="Google Drive"></a>
+          <a href="https://docs.google.com/document/u/0/?mode=html&tgif=c"><img src="https://th.bing.com/th/id/R.5ca9af57fa33d916fcb92121e367f9c4?rik=6kMaVxJW3xF%2fLg&pid=ImgRaw&r=0" alt="Google Docs"></a>
+          <a href="https://forms.gle/uWNYbwRGtorfniwFA"><img src="https://cdn-icons-png.flaticon.com/512/9069/9069013.png" alt="Connect with Thorpe"></a>
+        </div>
+        <div class="link-row custom-links" id="customLinks">
+          <button class="custom-link" onclick="editCustomLink(0)">Add Custom Link 1</button>
+          <button class="custom-link" onclick="editCustomLink(1)">Add Custom Link 2</button>
+          <button class="custom-link" onclick="editCustomLink(2)">Add Custom Link 3</button>
+        </div>
+      </div>
+      <div class="buttons right-buttons">
+        <select id="pageOutlineSelector" onchange="setPageOutline()">
+          <option value="maroon">Maroon</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="yellow">Yellow</option>
+        </select>
+        <input type="text" id="calendarId" placeholder="Enter Google Calendar ID" onchange="setCalendarId()">
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+
+        <!-- New Section for Button Color Customization -->
+        <select id="buttonColorSelector" onchange="saveButtonColors()">
+          <option value="#8B0000">Maroon</option>
+          <option value="#FF0000">Red</option>
+          <option value="#008000">Green</option>
+          <option value="#0000FF">Blue</option>
+          <option value="#FFFF00">Yellow</option>
+        </select>
+        
+        <select id="linkButtonColorSelector" onchange="saveButtonColors()">
+          <option value="#8B0000">Maroon</option>
+          <option value="#FF0000">Red</option>
+          <option value="#008000">Green</option>
+          <option value="#0000FF">Blue</option>
+          <option value="#FFFF00">Yellow</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
